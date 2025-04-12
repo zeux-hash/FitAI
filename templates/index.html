@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Action Prediction</title>
+</head>
+<body>
+    <h1>Action Prediction</h1>
+
+    <!-- Form to upload image -->
+    <form method="POST" enctype="multipart/form-data">
+        <label for="image">Upload an image for prediction:</label>
+        <input type="file" name="image" required>
+        <button type="submit">Submit</button>
+    </form>
+
+    {% if action %}
+        <h2>Prediction:</h2>
+        <p>Action: {{ action }}</p>
+        <p>Confidence: {{ confidence }}%</p>
+    {% endif %}
+</body>
+</html>
